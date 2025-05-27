@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <style>
+#hud {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 30, 80, 0.85);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  display: flex;
+  gap: 30px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  z-index: 999;
+}
+
+#hud div {
+  min-width: 70px;
+  text-align: center;
+}
+</style>
+
+<div id="hud">
+  <div id="score">pts 0</div>
+  <div id="timer">1:00</div>
+  <div id="accuracy">0%</div>
+</div>
+
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@v0.149.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.149.0/examples/jsm/"
+        }
+      }
+      </script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
